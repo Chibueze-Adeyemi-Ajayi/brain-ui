@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-// BRAIN proje
+// BRAIN projec
 function App() {
   return (
     <div className="App bg-black flex w-full h-full">
