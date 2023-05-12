@@ -3,6 +3,10 @@ const URL = 'https://brain-api-knps.onrender.com/';
 
 // sending the HTTP POST reqquest
 export function sendRequest (url, data, callback) {
+    console.log("processing ....");
     const req_url = URL + url;
-    $.post(req_url, data, res => {callback(res)});
+    $.post(req_url, data)
+     .progress((pos) => console.log(pos))
+     .catch(err => callback(err))
+     .then(res => callback(res));
 }
