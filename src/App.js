@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-// BRAIMN
+// BRAIM
 function App() {
   return (
     <div className="App bg-black flex w-full h-full">
