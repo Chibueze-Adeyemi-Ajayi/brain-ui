@@ -1,3 +1,8 @@
+import NavigationBar from "../components/footer";
+
 export default function Search () {
-    return <button>Jilo Billionaire</button>
+    return <section className="w-full h-full flex flex-col">
+        {/* navigation bar */}
+        <NavigationBar />
+    </section>
 }
