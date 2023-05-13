@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App bg-[#0B0E20] flex w-full h-full">
       {/* <span className="loader text-white w-12 h-12"></span> */}
-      {!page_var ? <Loader/> : <Router>
+      {!page_var ? <Loader callback={page_func}/> : <Router>
         <Routes>
           <Route exact path="/" component={<Home/>} />
           <Route path="/home" component={<Home/>} />
