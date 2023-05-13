@@ -3,7 +3,7 @@ import { sendRequest } from "./http";
 export function fetcher () {
     const url = 'brain/query/';
     const requests = {
-        query: "prompt engineering",
+        query: "Give a random information",
         role: "assistant"
     }
     sendRequest(url, requests, (status, res) => {
