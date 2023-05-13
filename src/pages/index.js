@@ -2,13 +2,13 @@ const Index = () => {
     return <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
     <div className="flex flex-col space-y-2 mb-5">
         <font className="font-extrabold text-center text-blue-600 text-3xl">BRAIN</font>
-        <font className="font-semibold text-center">Infinte Intelligence</font>
+        <font className="font-normal font-mono text-center">Infinte Intelligence</font>
     </div> 
     <div className="flex">
       <input
         placeholder="Ask jilo anything"
         type="text"
-        className="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="border  font-mono border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
       <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -16,15 +16,15 @@ const Index = () => {
       </svg>
     </button>
     </div>
-    <div className="mt-6">
+    <div className="mt-6  font-mono">
       <button className="text-sm text-blue-600 hover:underline">
-        Google Search
+        Search Engine
       </button>
       <button className="text-sm text-blue-600 hover:underline ml-2">
-        I'm Feeling Lucky
+        built on A.I
       </button>
     </div>
-    <div className="mt-12 text-gray-600">
+    <div className="mt-12 text-gray-600  font-mono">
       <p>
         Jilo Innovations &copy; {new Date().getFullYear()}
       </p>
