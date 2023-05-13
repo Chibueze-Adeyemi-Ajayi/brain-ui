@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
 import Index from './pages';
+import Search from './pages/search';
 
 // BRAIN project user interface
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Index/>} />
+        <Route exact path="/search" element={<Search/>} />
       </Routes>
     </Router>
   );
