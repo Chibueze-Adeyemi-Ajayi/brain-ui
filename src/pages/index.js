@@ -1,11 +1,12 @@
 const Index = () => {
     return <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
-    <div className="flex flex-col space-y-2 mb-2">
+    <div className="flex flex-col space-y-2 mb-5">
         <font className="font-extrabold text-center text-blue-600 text-3xl">BRAIN</font>
         <font className="font-semibold text-center">Infinte Intelligence</font>
     </div> 
     <div className="flex">
       <input
+        placeholder="Ask jilo anything"
         type="text"
         className="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
@@ -25,10 +26,7 @@ const Index = () => {
     </div>
     <div className="mt-12 text-gray-600">
       <p>
-        Google offered in:{' '}
-        <a href="https://www.google.com" className="text-blue-600">
-          English
-        </a>
+        Jilo Innovations &copy; {new Date().getFullYear()}
       </p>
     </div>
   </div>
