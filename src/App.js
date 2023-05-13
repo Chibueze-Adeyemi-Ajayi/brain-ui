@@ -11,16 +11,18 @@ import Home from './pages/home';
 function App() {
   // consuming the brain api
   const [page_var, page_func] = useState(false);
-  useEffect(() => { fetcher(page_func); }, []);
+  useEffect(fetcher, []);
   return (
     <div className="App bg-[#0B0E20] flex w-full h-full">
       {/* <span className="loader text-white w-12 h-12"></span> */}
-      {!page_var ? <Loader/> : <Router>
+      {/* {!page_var ? <Loader/> :  */}
+      <Router>
         <Routes>
           <Route exact path="/" component={<Home/>} />
           <Route path="/home" component={<Home/>} />
         </Routes>
-      </Router>}
+      </Router>
+      {/* } */}
     </div>
   );
 } 

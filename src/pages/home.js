@@ -1,3 +1,5 @@
-export default function Home (props) {
-    return <section>Jilo Billionaire</section>
+function Home (props) {
+    return <section className="bg-white">Jilo Billionaire</section>
 }
+
+export default Home;
