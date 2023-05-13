@@ -6,7 +6,7 @@ export function fetcher () {
         query: "prompt engineering",
         role: "assistant"
     }
-    sendRequest(url, requests, res => {
+    sendRequest(url, requests, (status, res) => {
         console.log(res);
         console.log("Thank you");
     });
