@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
-    <nav className="flex fixed top-0 items-center justify-between bg-white p-4 shadow">
+    <nav className="flex items-center justify-between bg-white p-4 shadow">
       <Link to="../" className="flex items-center">
         <span className="font-extrabold text-center font-[verdana] text-blue-600 text-2xl">BRAIN</span>
       </Link>
