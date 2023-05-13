@@ -7,6 +7,6 @@ export function sendRequest (url, data, callback) {
     const req_url = URL + url;
     $.post(req_url, data)
      .progress((pos) => console.log(pos))
-     .catch(err => callback(err))
-     .then(res => callback(res));
+     .catch(err => callback(status, err))
+     .then(res => callback(status, res));
 }
