@@ -5,7 +5,7 @@ import { fetcher } from './assets/js/fetcher';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
-import Home from './pages/home';
+import Index from './pages';
 
 // BRAIN project user interface
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" component={<Home/>} />
+        <Route exact path="/" element={<Index/>} />
       </Routes>
     </Router>
   );
