@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 function PictureCard(props) {
     return (
-      <div className="max-w-xs rounded-lg overflow-hidden shadow-lg">
+      <Link target="" to={props.url} className="max-w-xs rounded-lg overflow-hidden shadow-lg">
         <img
           className="w-full h-56 object-cover"
-          src={props.url}
+          src={props.thumbnail}
           alt="Nature"
         />
         <div className="p-4">
-          {/* <h2 className="text-xl font-bold text-gray-800 mb-2">Picture Card</h2> */}
+          <h2 className="text-md font-bold text-gray-800 mb-2">{props.title}</h2>
           {/* <p className="text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
             eleifend nisl. Mauris fringilla dapibus semper.
@@ -18,7 +20,7 @@ function PictureCard(props) {
             </button> */}
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 

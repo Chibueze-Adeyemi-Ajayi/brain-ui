@@ -60,7 +60,7 @@ export default function AllPage () {
             // image information
             images.forEach(image => {
                 const url = image.url, title = image.title, thumbnail = image.thumbnail;
-                image_arr.push();
+                image_arr.push(<PictureCard title={title} url={url} thumbnail={thumbnail} />);
             });
   
             page_data_func({
