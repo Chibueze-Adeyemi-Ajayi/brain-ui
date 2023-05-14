@@ -66,7 +66,7 @@ export default function AllPage () {
             // video information
             videos.forEach(video => {
                 const url = video.url, title = video.title, thumbnail = video.thumbnail;
-                image_arr.push(<VideoCard title={title} url={url} thumbnail={thumbnail} />);
+                video_arr.push(<VideoCard title={title} url={url} thumbnail={thumbnail} />);
             });
   
             page_data_func({
