@@ -1,7 +1,7 @@
-function NewsCard({url}) {
+function NewsCard(props) {
     return (
       <div className="max-w-md rounded-lg overflow-hidden shadow-lg">
-        <a href={url} className="text-blue-700 underline">{url}</a>
+        <a href={props.url} className="text-blue-700 underline">{props.url}</a>
         {/* <img
           className="w-full h-48 object-cover"
           src="https://via.placeholder.com/400x200"

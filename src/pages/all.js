@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import GoogleMap from "../components/googlemap";
-import LinkCard from "../components/link-card";
+//import LinkCard from "../components/link-card";
 import NewsCard from "../components/news-card";
 import PictureCard from "../components/picture-card";
 import TextCard from "../components/text-card";
 import VideoCard from "../components/video-card";
 import Loader from "../components/loader";
 import { searchForAllResults } from "../assets/js/script";
+import LinkCard from "../components/link-card";
+import { Link } from "react-router-dom";
 
 export default function AllPage () {
 
@@ -29,35 +31,36 @@ export default function AllPage () {
             
             // general info
             var info_arr = [<TextCard content={results["general_information"]} />],
-                link_arr = [], image_arr = [], video_arr = [], link_arr = [], news_arr = [];
+                link_arr = [], image_arr = [], video_arr = [], news_arr = [];
             
             // links
             var links = results["useful_links"];
-            links.forEach(link => {
-                link_arr.push(<LinkCard content={link.title} url={link.url} />);
-            });
+            // Object.entries(links).forEach(([key, value]) => {
+            //     console.log(links[key]);
+            //     link_arr.push(<LinkCard content={links[key].title} url={links[key].url} />);
+            // });
 
             // images
-            var images = results["image_sources"]
-            images.forEach(image => {
-                image_arr.push(<PictureCard url={image}/>);
-            });
+            // var images = results["image_sources"]
+            // images.forEach(image => {
+            //     image_arr.push(<PictureCard title={image.title} url={image.source}/>);
+            // });
 
-            // videos
-            var videos = results["video_sources"]
-            videos.forEach(video => {
-                video_arr.push(<VideoCard url={video}/>);
-            });
+            // // videos
+            // var videos = results["video_sources"]
+            // videos.forEach(video => {
+            //     video_arr.push(<VideoCard url={video}/>);
+            // });
 
-            // news
-            var news = results["news_sources"];
-            news.forEach(new_ => {
-                news_arr.push(<NewsCard url={new_}/>);
-            });
+            // // news
+            // var news = results["news_sources"];
+            // news.forEach(new_ => {
+            //     news_arr.push(<NewsCard url={new_}/>);
+            // });
 
             page_data_func({
                 general_informations:info_arr, suggested_links: link_arr,
-                image_results: image_arr, video_results: video_arr,
+                image_results: image_arr, video_results: [],
                 news_results: [], map_results: [],
                 suggested_searches: []
             })

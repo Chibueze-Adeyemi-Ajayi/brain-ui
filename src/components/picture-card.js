@@ -1,9 +1,9 @@
-function PictureCard({url}) {
+function PictureCard(props) {
     return (
       <div className="max-w-xs rounded-lg overflow-hidden shadow-lg">
         <img
           className="w-full h-56 object-cover"
-          src={url}
+          src={props.url}
           alt="Nature"
         />
         <div className="p-4">
