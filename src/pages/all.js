@@ -45,36 +45,11 @@ export default function AllPage () {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
             loading_func(false);
-            
+            console.log(JSON.parse(JSON.stringify(results)));
             // general info
             var info_arr = [<TextCard content={results["general_information"]} />],
                 link_arr = [], image_arr = [], video_arr = [], news_arr = [];
-                fetchNestedData(results)
-            // links
-            
-            // Object.entries(links).forEach(([key, value]) => {
-            //     console.log(links[key]);
-            //     link_arr.push(<LinkCard content={links[key].title} url={links[key].url} />);
-            // });
-
-            // images
-            // var images = results["image_sources"]
-            // images.forEach(image => {
-            //     image_arr.push(<PictureCard title={image.title} url={image.source}/>);
-            // });
-
-            // // videos
-            // var videos = results["video_sources"]
-            // videos.forEach(video => {
-            //     video_arr.push(<VideoCard url={video}/>);
-            // });
-
-            // // news
-            // var news = results["news_sources"];
-            // news.forEach(new_ => {
-            //     news_arr.push(<NewsCard url={new_}/>);
-            // });
-
+              
             page_data_func({
                 general_informations:[], suggested_links: [],
                 image_results: image_arr, video_results: [],
