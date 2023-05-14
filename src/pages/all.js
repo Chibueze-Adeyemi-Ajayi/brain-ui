@@ -44,22 +44,27 @@ export default function AllPage () {
         searchForAllResults((status, results) => {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
-            loading_func(false);
-            var data = JSON.parse(JSON.stringify(results));
+            loading_func(false); 
+            var data = JSON.parse(JSON.stringify(results)); console.log(data);
 
             // each categories
             var general = data.general_information, images = data.images,
                 links = data.links, maps = data.maps, news = data.news,
                 suggestions = data.suggestions, videos = data.videos;
 
-            
-
             // general info
-            var info_arr = [<TextCard content={results["general_information"]} />],
-                link_arr = [], image_arr = [], video_arr = [], news_arr = [];
-              
+            var info_arr = [<TextCard content={general} />], map_array = [],
+                link_arr = [], image_arr = [], video_arr = [], news_arr = [],
+                suggestion_arr = [];
+            
+            // image information
+            images.forEach(image => {
+                const url = image.url, title = image.title, thumbnail = image.thumbnail;
+                image_arr.push();
+            });
+  
             page_data_func({
-                general_informations:[], suggested_links: [],
+                general_informations: info_arr, suggested_links: [],
                 image_results: image_arr, video_results: [],
                 news_results: [], map_results: [],
                 suggested_searches: []
