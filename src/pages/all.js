@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import GoogleMap from "../components/googlemap";
 import LinkCard from "../components/link-card";
 import NewsCard from "../components/news-card";
@@ -70,5 +71,6 @@ export default function AllPage () {
                 </div>
             </div>
         </section>
+        <Footer/>
     </section>
 }
