@@ -1,4 +1,5 @@
 import GoogleMap from "../components/googlemap";
+import LinkCard from "../components/link-card";
 import NewsCard from "../components/news-card";
 import PictureCard from "../components/picture-card";
 import TextCard from "../components/text-card";
@@ -46,6 +47,16 @@ export default function AllPage () {
                 <h3 className="font-bold text-2xl">Map</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <GoogleMap />
+                </div>
+            </div>
+        </section>
+        <section className="w-full flex">
+            <div className="w-[65%] mx-auto space-y-6">
+                <h3 className="font-bold text-2xl">News</h3>
+                <div className="w-full h-fit grid grid-cols-3 gap-3">
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
                 </div>
             </div>
         </section>
