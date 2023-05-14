@@ -5,7 +5,7 @@ function PictureCard(props) {
       <Link target="" to={props.url} className="max-w-xs border border-gray-100 rounded-lg overflow-hidden shadow-lg">
         <img
           className="w-full h-56 object-cover"
-          src={props.thumbnail}
+          src={props.url}
           alt="Nature"
         />
         <div className="p-4">

@@ -63,9 +63,15 @@ export default function AllPage () {
                 image_arr.push(<PictureCard title={title} url={url} thumbnail={thumbnail} />);
             });
   
+            // video information
+            videos.forEach(video => {
+                const url = video.url, title = video.title, thumbnail = video.thumbnail;
+                image_arr.push(<VideoCard title={title} url={url} thumbnail={thumbnail} />);
+            });
+  
             page_data_func({
                 general_informations: info_arr, suggested_links: [],
-                image_results: image_arr, video_results: [],
+                image_results: image_arr, video_results: video_arr,
                 news_results: [], map_results: [],
                 suggested_searches: []
             })

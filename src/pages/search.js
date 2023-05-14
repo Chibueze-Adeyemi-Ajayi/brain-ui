@@ -10,11 +10,10 @@ export default function Search () {
         </section>
 
         {/* applcations several pages */}
-        [
-            {/* all page */}
-            <AllPage />,
-        ][0]
-
+        {[
+        //    all page
+            <AllPage />
+        ][0]}
         {/* chat section */}
         {/* <Chat /> */}
         
