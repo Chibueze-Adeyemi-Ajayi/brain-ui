@@ -29,7 +29,7 @@ export default function AllPage () {
             
             // general info
             var info_arr = [<TextCard content={results["general_information"]} />],
-                link_arr = [], image_arr;
+                link_arr = [], image_arr = [], video_arr = [], link_arr = [], news_arr = [];
             
             // links
             var links = results["useful_links"];
@@ -43,9 +43,21 @@ export default function AllPage () {
                 image_arr.push(<PictureCard url={image}/>);
             });
 
+            // videos
+            var videos = results["video_sources"]
+            videos.forEach(video => {
+                video_arr.push(<VideoCard url={video}/>);
+            });
+
+            // news
+            var news = results["news_sources"];
+            news.forEach(new_ => {
+                news_arr.push(<NewsCard url={new_}/>);
+            });
+
             page_data_func({
                 general_informations:info_arr, suggested_links: link_arr,
-                image_results: [], video_results: [],
+                image_results: image_arr, video_results: video_arr,
                 news_results: [], map_results: [],
                 suggested_searches: []
             })
