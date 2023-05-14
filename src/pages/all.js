@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import GoogleMap from "../components/googlemap";
 import LinkCard from "../components/link-card";
@@ -7,10 +7,18 @@ import PictureCard from "../components/picture-card";
 import TextCard from "../components/text-card";
 import VideoCard from "../components/video-card";
 import Loader from "../components/loader";
+import { searchForAllResults } from "../assets/js/script";
 
 export default function AllPage () {
 
     const [loading_var, loading_func] = useState(true);
+    const [err_var, err_function] = useState(false);
+
+    useEffect(() => {
+        searchForAllResults((status, results) => {
+            err_function(status ? false : true); // checking for error message 
+        });
+    }, []);
 
     return loading_var ? <Loader/> : <section className="w-full p-3 md:p-6 mt-[55px] h-full space-y-6">
 
