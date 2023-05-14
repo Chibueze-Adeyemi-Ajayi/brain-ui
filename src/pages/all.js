@@ -26,13 +26,21 @@ export default function AllPage () {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
             loading_func(false);
-
-            var info_arr = [<TextCard content={results["general-information"]} />],
-                link_arr = [];
-
-            var links = results["useful-links"];
+            
+            // general info
+            var info_arr = [<TextCard content={results["general_information"]} />],
+                link_arr = [], image_arr;
+            
+            // links
+            var links = results["useful_links"];
             links.forEach(link => {
                 link_arr.push(<LinkCard content={link.title} url={link.url} />);
+            });
+
+            // images
+            var images = results["image_sources"]
+            images.forEach(image => {
+                image_arr.push(<PictureCard url={image}/>);
             });
 
             page_data_func({
