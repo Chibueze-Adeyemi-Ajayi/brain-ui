@@ -17,10 +17,14 @@ export default function AllPage () {
     useEffect(() => {
         searchForAllResults((status, results) => {
             err_function(status ? false : true); // checking for error message 
+            if (!status) return;
+            console.log(results);
         });
     }, []);
 
-    return loading_var ? <Loader/> : <section className="w-full p-3 md:p-6 mt-[55px] h-full space-y-6">
+    return loading_var ? <Loader/> : err_var ? <div className="w-full h-full flex flex-col">
+        <div className="w-fit h-fit m-auto">Oops, Something went wrong</div>
+    </div> : <section className="w-full p-3 md:p-6 mt-[55px] h-full space-y-6">
 
         <section className="w-full flex flex-col">
             <div className="w-[65%] mx-auto border-b border-gray-200 pb-8">
