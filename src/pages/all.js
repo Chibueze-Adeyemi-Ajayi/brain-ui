@@ -21,6 +21,23 @@ export default function AllPage () {
         news_results: [], map_results: [],
         suggested_searches: []
     })
+    
+    function fetchNestedData(obj, groupName = '') {
+        for (let key in obj) {
+          if (typeof obj[key] === 'object' && obj[key] !== null) {
+            // Found a nested object or array
+            if (Array.isArray(obj[key])) {
+              // If the value is an array, group the data
+              console.log(`Group: ${groupName}`);
+              console.log(`Data: `, obj[key]);
+            } else {
+              // If the value is an object, recursively fetch nested data
+              const nestedGroupName = groupName !== '' ? `${groupName}.${key}` : key;
+              fetchNestedData(obj[key], nestedGroupName);
+            }
+          }
+        }
+      }
 
     // searching for default message
     useEffect(() => {
@@ -32,9 +49,9 @@ export default function AllPage () {
             // general info
             var info_arr = [<TextCard content={results["general_information"]} />],
                 link_arr = [], image_arr = [], video_arr = [], news_arr = [];
-            
+                fetchNestedData(results)
             // links
-            var links = results["useful_links"];
+            
             // Object.entries(links).forEach(([key, value]) => {
             //     console.log(links[key]);
             //     link_arr.push(<LinkCard content={links[key].title} url={links[key].url} />);
@@ -59,7 +76,7 @@ export default function AllPage () {
             // });
 
             page_data_func({
-                general_informations:info_arr, suggested_links: link_arr,
+                general_informations:[], suggested_links: [],
                 image_results: image_arr, video_results: [],
                 news_results: [], map_results: [],
                 suggested_searches: []
