@@ -1,13 +1,8 @@
-function TextCard() {
+function TextCard(props) {
     return (
       <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
         <h2 className="text-xl font-bold text-gray-800 mb-4">General Information</h2>
-        <p className="text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
-          eleifend nisl. Mauris fringilla dapibus semper. Aenean at elit
-          consequat, pulvinar eros eu, consequat mauris. In hac habitasse platea
-          dictumst.
-        </p>
+        <p className="text-gray-600">{props.content}</p>
         <div className="mt-4 flex items-center justify-end">
           <button className="bg-blue-500 flex flex-row space-x-4 hover:bg-blue-600 text-white py-2 px-4 rounded">
             <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">

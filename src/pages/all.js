@@ -14,7 +14,7 @@ export default function AllPage () {
     const [loading_var, loading_func] = useState(true);
     const [err_var, err_function] = useState(false);
     const [page_data_var, page_data_func] = useState({
-        general_informations:"", suggested_links: [],
+        general_informations:[], suggested_links: [],
         image_results: [], video_results: [],
         news_results: [], map_results: [],
         suggested_searches: []
@@ -26,7 +26,21 @@ export default function AllPage () {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
             loading_func(false);
-            
+
+            var info_arr = [<TextCard content={results["general-information"]} />],
+                link_arr = [];
+
+            var links = results["useful-links"];
+            links.forEach(link => {
+                link_arr.push(<LinkCard content={link.title} url={link.url} />);
+            });
+
+            page_data_func({
+                general_informations:info_arr, suggested_links: link_arr,
+                image_results: [], video_results: [],
+                news_results: [], map_results: [],
+                suggested_searches: []
+            })
         });
     }, []);
 
