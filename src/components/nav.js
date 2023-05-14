@@ -15,7 +15,6 @@ function NavigationBar() {
         <a href="#" className="text-gray-600 hover:text-blue-600">Images</a>
         <a href="#" className="text-gray-600 hover:text-blue-600">News</a>
         <a href="#" className="text-gray-600 hover:text-blue-600">Chat</a>
-        <a href="#" className="text-gray-600 hover:text-blue-600">News</a>
       </div>
       <div className="flex items-center">
         <div className="relative">
