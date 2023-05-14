@@ -52,7 +52,17 @@ export default function AllPage () {
         </section>
         <section className="w-full flex">
             <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">News</h3>
+                <h3 className="font-bold text-2xl">Suggested Links</h3>
+                <div className="w-full h-fit grid grid-cols-3 gap-3">
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
+                </div>
+            </div>
+        </section>
+        <section className="w-full flex">
+            <div className="w-[65%] mx-auto space-y-6">
+                <h3 className="font-bold text-2xl">Suggested Search</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <LinkCard/> <LinkCard/>
                     <LinkCard/> <LinkCard/>
