@@ -29,5 +29,15 @@ export default function AllPage () {
                 </div>
             </div>
         </section>
+        <section className="w-full flex">
+            <div className="w-[65%] mx-auto space-y-6">
+                <h3 className="font-bold text-2xl">News</h3>
+                <div className="w-full h-fit grid grid-cols-3 gap-3">
+                    <VideoCard/> <VideoCard/>
+                    <VideoCard/> <VideoCard/>
+                    <VideoCard/> <VideoCard/>
+                </div>
+            </div>
+        </section>
     </section>
 }
