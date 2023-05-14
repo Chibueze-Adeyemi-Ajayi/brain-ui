@@ -45,7 +45,15 @@ export default function AllPage () {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
             loading_func(false);
-            console.log(JSON.parse(JSON.stringify(results)));
+            var data = JSON.parse(JSON.stringify(results));
+
+            // each categories
+            var general = data.general_information, images = data.images,
+                links = data.links, maps = data.maps, news = data.news,
+                suggestions = data.suggestions, videos = data.videos;
+
+            
+
             // general info
             var info_arr = [<TextCard content={results["general_information"]} />],
                 link_arr = [], image_arr = [], video_arr = [], news_arr = [];
