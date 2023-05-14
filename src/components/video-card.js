@@ -16,9 +16,9 @@ function VideoCard() {
             eleifend nisl. Mauris fringilla dapibus semper.
           </p>
           <div className="mt-4">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            {/* <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
               Watch Now
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
