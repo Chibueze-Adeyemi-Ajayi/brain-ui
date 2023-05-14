@@ -8,9 +8,15 @@ import VideoCard from "../components/video-card";
 
 export default function AllPage () {
     return <section className="w-full p-3 md:p-6 mt-[55px] h-full space-y-6">
-        <section className="w-full flex">
+        <section className="w-full flex flex-col">
             <div className="w-[65%] mx-auto">
-                <TextCard/>
+                <TextCard/> <br></br><br></br>
+                <h3 className="font-bold text-xl text-gray-800">Suggested Links</h3> <br></br>
+                <div className="w-full h-fit grid grid-cols-3 gap-3">
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
+                    <LinkCard/> <LinkCard/>
+                </div>
             </div>
         </section>
         <section className="w-full flex">
