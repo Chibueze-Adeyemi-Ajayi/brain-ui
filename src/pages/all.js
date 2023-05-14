@@ -43,8 +43,8 @@ export default function AllPage () {
             </div>
         </section>
         <section className="w-full flex">
-            <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">News</h3>
+            <div className="w-[65%] mx-auto space-y-6 pb-16 border-b border-gray-200">
+                <h3 className="font-bold text-xl text-gray-800">News</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <NewsCard/> <NewsCard/>
                     <NewsCard/> <NewsCard/>
@@ -53,16 +53,17 @@ export default function AllPage () {
             </div>
         </section>
         <section className="w-full flex">
-            <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">Map</h3>
+            <div className="w-[65%] mx-auto space-y-6 pb-16 border-b border-gray-200">
+                <h3 className="font-bold text-xl text-gray-800">Map</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <GoogleMap />
                 </div>
             </div>
         </section>
+        
         <section className="w-full flex">
             <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">Suggested Search</h3>
+                <h3 className="font-bold text-xl text-gray-800">Suggested Search</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <LinkCard/> <LinkCard/>
                     <LinkCard/> <LinkCard/>
@@ -70,6 +71,7 @@ export default function AllPage () {
                 </div>
             </div>
         </section>
+
         <Footer/>
     </section>
 }
