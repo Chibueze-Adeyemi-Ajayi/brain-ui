@@ -16,7 +16,7 @@ export default function Search () {
         ][0]
 
         {/* chat section */}
-        <Chat />
+        {/* <Chat /> */}
         
     </section>
 }

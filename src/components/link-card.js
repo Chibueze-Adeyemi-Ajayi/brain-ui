@@ -1,15 +1,12 @@
-function LinkCard({ title, description, url }) {
+function LinkCard({ title, url }) {
     return (
-      <div className="bg-white shadow-md rounded-md p-4">
+      <div className="bg-gray-200 rounded-full p-4 hover:bg-gray-300">
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <h2 className="text-xl font-bold mb-2">{title}</h2>
-        </a>
-        <p className="text-gray-600">{description}</p>
-        <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-          Read More
+          <h2 className="text-xl font-semibold">{title}</h2>
         </a>
       </div>
     );
   }
+  
 
   export default LinkCard;
