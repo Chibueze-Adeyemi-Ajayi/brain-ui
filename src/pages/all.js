@@ -26,7 +26,7 @@ export default function AllPage () {
             err_function(status ? false : true); // checking for error message 
             if (!status) return;
             loading_func(false);
-            console.log(results);
+            
         });
     }, []);
 
