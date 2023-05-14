@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 function PictureCard(props) {
     return (
-      <Link target="" to={props.url} className="max-w-xs rounded-lg overflow-hidden shadow-lg">
+      <Link target="" to={props.url} className="max-w-xs border border-gray-100 rounded-lg overflow-hidden shadow-lg">
         <img
           className="w-full h-56 object-cover"
           src={props.thumbnail}
           alt="Nature"
         />
         <div className="p-4">
-          <h2 className="text-md font-bold text-gray-800 mb-2">{props.title}</h2>
+          <h2 className="text-md font-normal text-center text-gray-800 mb-2">{props.title}</h2>
           {/* <p className="text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
             eleifend nisl. Mauris fringilla dapibus semper.
