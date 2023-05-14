@@ -22,8 +22,8 @@ export default function AllPage () {
         </section>
 
         <section className="w-full flex">
-            <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">Image Results</h3>
+            <div className="w-[65%] mx-auto space-y-6 pb-16 border-b border-gray-200">
+                <h3 className="font-bold text-xl text-gray-800">Image Results</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <PictureCard/> <PictureCard/>
                     <PictureCard/> <PictureCard/>
@@ -31,9 +31,10 @@ export default function AllPage () {
                 </div>
             </div>
         </section>
+
         <section className="w-full flex">
-            <div className="w-[65%] mx-auto space-y-6">
-                <h3 className="font-bold text-2xl">Video Results</h3>
+            <div className="w-[65%] mx-auto space-y-6 pb-16 border-b border-gray-200">
+                <h3 className="font-bold text-xl text-gray-800">Video Results</h3>
                 <div className="w-full h-fit grid grid-cols-3 gap-3">
                     <VideoCard/> <VideoCard/>
                     <VideoCard/> <VideoCard/>
